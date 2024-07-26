@@ -1,0 +1,28 @@
+{
+	"borderInterfaces": [
+		{
+			"borderInterface": {
+				"hostname": "border-1",
+				"interface": "GigabitEthernet0/1"
+			}
+		},
+		{
+			"borderInterface": {
+				"hostname": "border-1",
+				"interface": "GigabitEthernet0/3"
+			}
+		}
+	],
+    "ispNodeInfo": [
+    {
+      "asn": 64501,
+      "name": "ISP1",
+      "role": "PRIVATE_BACKBONE"
+    },
+    {
+        "asn": 64502,
+        "name": "ISP2",
+        "role": "PRIVATE_BACKBONE"
+      }
+   ]
+}

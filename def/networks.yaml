@@ -1,0 +1,135 @@
+networks:
+  ANY:
+    values:
+      - address: 0.0.0.0/0
+  LOOPBACK:
+    values:
+      - address: 127.0.0.0/8
+  RFC1918:
+    values:
+      - address: 10.0.0.0/8
+        comment: "non-public"
+      - address: 172.16.0.0/12
+        comment: "non-public"
+      - address: 192.168.0.0/16
+        comment: "non-public"
+  VLANS:
+    values:
+      - name: VLAN10
+      - name: VLAN20
+      - name: VLAN30
+      - name: VLAN40
+  VLAN10:
+    values:
+    - address: 192.168.10.0/24
+  VLAN10_IF:
+    values:
+    - address: 192.168.10.0/32
+    - address: 192.168.10.252/32
+    - address: 192.168.10.253/32
+    - address: 192.168.10.254/32
+  ALICE_DESKTOP:
+    values:
+      - address: 192.168.10.98/32
+  VLAN20:
+    values:
+    - address: 192.168.20.0/24
+  VLAN20_IF:
+    values:
+    - address: 192.168.20.0/32
+    - address: 192.168.20.252/32
+    - address: 192.168.20.253/32
+    - address: 192.168.20.254/32
+  VLAN30:
+    values:
+    - address: 192.168.30.0/24
+  VLAN30_IF:
+    values:
+    - address: 192.168.30.0/32
+    - address: 192.168.30.252/32
+    - address: 192.168.30.253/32
+    - address: 192.168.30.254/32
+  VLAN40:
+    values:
+    - address: 192.168.40.0/24
+  VLAN40_IF:
+    values:
+    - address: 192.168.40.0/32
+    - address: 192.168.40.252/32
+    - address: 192.168.40.253/32
+    - address: 192.168.40.254/32
+
+# Data center IPs
+  DATACENTER:
+    values:
+    - address: 172.16.50.0/24
+  DATACENTER_IF:
+    values:
+      - address: 172.16.50.0/32
+      - address: 172.16.50.254/32
+  DATACENTER_SERVER1:
+    values:
+    - address: 172.16.50.1/32
+  FIN_SRV:
+    values:
+    - address: 172.16.50.60/32
+    - address: 172.16.50.61/32
+  FIN_DB:
+    values:
+    - address: 172.16.50.65/32
+    - address: 172.16.50.67/32
+  INTERNAL_WEB:
+    values:
+    - address: 172.16.50.22/32
+    - address: 172.16.50.24/32
+  DB_PRIVATE:
+    values:
+    - address: 172.16.50.1/32
+  NTP_SERVER:
+    values:
+    - address: 172.16.50.22/32
+  INTERNAL_DNS:
+    values:
+    - address: 172.16.50.90/32
+  FOO:
+    values:
+      - address: 172.16.50.1/32
+# DMZ and NAT
+  DMZ_IF:
+    values:
+    - address: 195.1.1.128/30
+    - address: 195.1.1.132/30
+  NAT:
+    values:
+    - address: 195.1.1.0/25
+  DMZ:
+    values:
+    - address: 195.1.1.160/27
+    - address: 195.1.1.192/26
+  PUBLIC_WEB:
+    values:
+    - address: 195.1.1.161/32
+
+
+
+# Non-company IPs    
+  GOOGLE_DNS:
+    values:
+    - address: 8.8.8.8/32
+  BANK_OF_COMPANY:
+    values:
+      - address: 9.1.2.4/32
+  CLOUDFLARE_DNS:
+    values:
+      - address: 1.1.1.1/32
+
+
+services:
+  DNS:
+  - port: 53
+    protocol: tcp
+  - port: 53
+    protocol: udp
+
+
+
