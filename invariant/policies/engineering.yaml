@@ -1,0 +1,12 @@
+access-policy:
+  - name: vlan10-security-policy
+    comment: Access exiting VLAN10 is controlled by this policy
+    owner: neteng@company.com
+    egress-network: VLAN10
+    rules:
+      - type: egress-critical-flow
+        comment: VLAN10 must be able to reach the data center.
+        destination-address: DATACENTER
+        destination-port: HTTPS
+        protocol: tcp
+

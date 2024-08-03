@@ -1,0 +1,9 @@
+probe_targets:
+  - comment: public internet probes
+    target: CLOUDFLARE_DNS GOOGLE_DNS
+    type: icmp-echo udp
+    ignore-filters: True
+  - comment: DMZ Probes
+    target: DATACENTER
+    type: icmp-echo udp
+    ignore-filters: True

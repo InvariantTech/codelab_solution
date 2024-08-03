@@ -1,0 +1,14 @@
+access-policy:
+  - name: datacenter-security-policy
+    comment: Access to the datacenter is controlled by this policy
+    owner: neteng@company.com
+    ingress-network: DATACENTER
+    rules:
+      - type: ingress-deny
+        comment: VLAN30 must not be able to reach DATACENTER through SSH
+        source-address: VLAN30
+        destination-port: SSH
+        protocol: tcp
+      - type: ingress-deny
+        comment: VLAN40 must not be able to reach DATACENTER at all.
+        source-address: VLAN40
