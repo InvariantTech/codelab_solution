@@ -17,12 +17,12 @@
     {
       "asn": 64501,
       "name": "ISP1",
-      "role": "PRIVATE_BACKBONE"
+      "role": "TRANSIT"
     },
     {
         "asn": 64502,
         "name": "ISP2",
-        "role": "PRIVATE_BACKBONE"
+        "role": "TRANSIT"
       }
    ]
 }

@@ -1,6 +1,0 @@
-locations:
-  EXTERNAL:
-  - devices: border-1
-    interfaces: GigabitEthernet0/1
-  - devices: border-1
-    interfaces: GigabitEthernet0/3
